@@ -4,6 +4,18 @@
 @import "../app/angular-styles.scss";
 
 body {
-    font-size: 10px;
-    
+    .content{
+        margin-top: 65px;
+        min-width: 800px;
+    }
+    .container{
+       min-width: 800px;
+    }
+    .logo{
+        background-image: url("assets/logo.png");
+        background-repeat: no-repeat;
+        width: 205px;
+        margin-top: 5px;
+        margin-bottom: -5px;
+    }
 }
