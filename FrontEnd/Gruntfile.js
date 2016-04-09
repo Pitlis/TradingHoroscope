@@ -9,7 +9,8 @@ module.exports = function(grunt) {
                     install: false,
                     copy: true,
                     targetDir: './dist/libs',
-                    cleanTargetDir: true
+                    cleanTargetDir: true,
+                    stripAffix: ''
                 }
             }
         },
@@ -53,7 +54,7 @@ module.exports = function(grunt) {
         },
         masterify: {
             dist: {
-                src: ['!static_components/*.html', '!static_components/master.html'],
+                src: ['static_components/**/*.html', '!static_components/master.html'],
                 dest: 'dist/',
                 options: {
                     beautify: true,

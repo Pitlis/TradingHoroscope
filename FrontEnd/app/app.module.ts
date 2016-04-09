@@ -1,5 +1,4 @@
-angular.module('app', [
-]);
+angular.module('app', []);
 
 import './app.route';
 import './app.run';
