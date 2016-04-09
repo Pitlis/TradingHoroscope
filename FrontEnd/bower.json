@@ -1,0 +1,25 @@
+{
+  "name": "TradingHoroscope",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Nikita Bozhkov"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.3",
+    "bootstrap": "^3.3.6",
+    "angular-ui-router": "^0.2.18",
+    "jquery": "^2.2.2",
+    "angular-bootstrap": "^1.2.5"
+  }
+}
