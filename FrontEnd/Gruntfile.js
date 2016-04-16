@@ -28,12 +28,18 @@ module.exports = function(grunt) {
                     dest: 'dist/assets/'
                 }],
             },
-            libs:{
+            libs: {
                 files: [{
                     expand: true,
                     cwd: 'bower_components/video.js/dist',
                     src: ['**/*'],
                     dest: 'dist/libs/video.js/dist'
+                },
+                {
+                    expand: true,
+                    cwd: 'bower_components/bootstrap/dist',
+                    src: ['**/*'],
+                    dest: 'dist/libs/bootstrap/dist'
                 }],
             }
         },
