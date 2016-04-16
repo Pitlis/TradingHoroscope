@@ -1,27 +1,20 @@
 .index {
     .img-zodiac{
-        width: 80%;
-        height: 80%;
+        width: 60%;
+        height: 60%;
         margin-top: 40px;
+        margin-left:15%;
     }
     
-    .panel-login{
-        //max-width: 266px;
-        margin-left: 12px;
-        margin-right: 12px;
-        margin-top: 60%;
-    }
-    .button-login{
-    }
-    .panel-login-header{
-        background-color: white;
-    }
     .zodiac-block{
-        max-height: 600px;
-        min-height: 600px;
-        min-width: 800px;
+        // max-height: 600px;
+        // min-height: 600px;
+        // min-width: 750px;
     }
     .col-sm-3{
         min-width: 60px;
     }
+    .player{
+    }
+    
 }
