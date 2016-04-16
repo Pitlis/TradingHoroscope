@@ -1,144 +1,157 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='app'>
 
 <head>
     <title>Horoscope</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
-    <link rel="stylesheet" type="text/css" href="libs/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="libs/video.js/dist/video-js.css" />
 
     <link rel="stylesheet" type="text/css" href="styles.css">
 
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-brand logo">
-                <!--<img class="img-zodiac" src="assets/logo.png" alt="home page">-->
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="Index.html">Horoscope</a></li>
-                <li><a href="Why.html">Why?</a></li>
-                <li><a href="about.html">About us</a></li>
-            </ul>
+    <div class="menu">
+        <div class="menu-logo">
+            <img class="img-zodiac-logo" src="assets/logo.png" alt="home page">
         </div>
-    </nav>
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li id="menu_home"><a href="index.html">HOME</a></li>
+                    <li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ZODIACS<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Aries</a></li>
+                                <li><a href="#">Taurus</a></li>
+                                <li><a href="#">Gemini</a></li>
+                                <li><a href="#">Cancer</a></li>
+                                <li><a href="#">Leo</a></li>
+                                <li><a href="#">Virgo</a></li>
+                                <li><a href="#">Libra</a></li>
+                                <li><a href="#">Scorpio</a></li>
+                                <li><a href="#">Sagittarius</a></li>
+                                <li><a href="#">Capricorn</a></li>
+                                <li><a href="#">Aquarius</a></li>
+                                <li><a href="#">Pisces</a></li>
+                            </ul>
+                        </li>
+                    </li>
+                    <li id="menu_products"><a href="products.html">PRODUCTS</a></li>
+                    <li id="menu_newsletter"><a href="index.html">NEWSLETTER</a></li>
+                    <li id="menu_faq"><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
     <div class="container content">
-        <div class="header">
-
-        </div>
         <div class="main-content">
 
             <div class="index">
-                <div class="zodiac-block">
-                    <div class="row">
-                        <div class="col-md-8 col-sm-8">
-                            <div class="row">
-                                <div class="col-md-3 col-sm-3">
-                                    <a href="#">
-                                        <img class="img-zodiac" src="assets/zodiac/aries.png" alt="zodiac aries" data-toggle="tooltip" data-placement="bottom" title="Aries">
-                                    </a>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <a href="#">
-                                        <img class="img-zodiac" src="assets/zodiac/taurus.png" alt="zodiac taurus" data-toggle="tooltip" data-placement="bottom" title="Taurus">
-                                    </a>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <a href="#">
-                                        <img class="img-zodiac" src="assets/zodiac/gemini.png" alt="zodiac gemini" data-toggle="tooltip" data-placement="bottom" title="Gemini">
-                                    </a>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <a href="#">
-                                        <img class="img-zodiac" src="assets/zodiac/cancer.png" alt="zodiac cancer" data-toggle="tooltip" data-placement="bottom" title="Cancer">
-                                    </a>
-                                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="player">
+                            <video id="vid1" class="video-js vjs-default-skin vjs-16-9" controls data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=33o67OdDqac"}] }'>
+  </video>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="zodiac-block">-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <a href="#">
+                                    <img class="img-zodiac" src="assets/zodiac/aries.png" alt="zodiac aries" data-toggle="tooltip" data-placement="bottom" title="Aries">
+                                </a>
                             </div>
-                            <div class="row">
-                                <div class="col-md-3 col-sm-3">
-                                    <a href="#">
-                                        <img class="img-zodiac" src="assets/zodiac/leo.png" alt="zodiac leo" data-toggle="tooltip" data-placement="bottom" title="Leo">
-                                    </a>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <a href="#">
-                                        <img class="img-zodiac" src="assets/zodiac/virgo.png" alt="zodiac virgo" data-toggle="tooltip" data-placement="bottom" title="Virgo">
-                                    </a>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <a href="#">
-                                        <img class="img-zodiac" src="assets/zodiac/libra.png" alt="zodiac libra" data-toggle="tooltip" data-placement="bottom" title="Libra">
-                                    </a>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <a href="#">
-                                        <img class="img-zodiac" src="assets/zodiac/scorpio.png" alt="zodiac scorpio" data-toggle="tooltip" data-placement="bottom" title="Scorpio">
-                                    </a>
-                                </div>
+                            <div class="col-xs-3">
+                                <a href="#">
+                                    <img class="img-zodiac" src="assets/zodiac/taurus.png" alt="zodiac taurus" data-toggle="tooltip" data-placement="bottom" title="Taurus">
+                                </a>
                             </div>
-                            <div class="row">
-                                <div class="col-md-3 col-sm-3">
-                                    <a href="#">
-                                        <img class="img-zodiac" src="assets/zodiac/sagittarius.png" alt="zodiac sagittarius" data-toggle="tooltip" data-placement="bottom" title="Sagittarius">
-                                    </a>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <a href="#">
-                                        <img class="img-zodiac" src="assets/zodiac/capricorn.png" alt="zodiac capricorn" data-toggle="tooltip" data-placement="bottom" title="Capricorn">
-                                    </a>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <a href="#">
-                                        <img class="img-zodiac" src="assets/zodiac/aquarius.png" alt="zodiac aquarius" data-toggle="tooltip" data-placement="bottom" title="Aquarius">
-                                    </a>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <a href="#">
-                                        <img class="img-zodiac" src="assets/zodiac/pisces.png" alt="zodiac pisces" data-toggle="tooltip" data-placement="bottom" title="Pisces">
-                                    </a>
-                                </div>
+                            <div class="col-xs-3">
+                                <a href="#">
+                                    <img class="img-zodiac" src="assets/zodiac/gemini.png" alt="zodiac gemini" data-toggle="tooltip" data-placement="bottom" title="Gemini">
+                                </a>
+                            </div>
+                            <div class="col-xs-3">
+                                <a href="#">
+                                    <img class="img-zodiac" src="assets/zodiac/cancer.png" alt="zodiac cancer" data-toggle="tooltip" data-placement="bottom" title="Cancer">
+                                </a>
                             </div>
                         </div>
-
-                        <div class="col-md-3 col-sm-4">
-                            <div class="panel panel-default panel-login">
-                                <div class="panel-heading panel-login-header">Panel heading without title</div>
-                                <div class="panel-body">
-                                    <form role="form">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" id="userEmail" placeholder="Email">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" id="userPasswork" placeholder="Password">
-                                        </div>
-                                        <button type="submit" class="btn btn-default button-login pull-right">Log in</button>
-                                    </form>
-                                </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <a href="#">
+                                    <img class="img-zodiac" src="assets/zodiac/leo.png" alt="zodiac leo" data-toggle="tooltip" data-placement="bottom" title="Leo">
+                                </a>
+                            </div>
+                            <div class="col-xs-3">
+                                <a href="#">
+                                    <img class="img-zodiac" src="assets/zodiac/virgo.png" alt="zodiac virgo" data-toggle="tooltip" data-placement="bottom" title="Virgo">
+                                </a>
+                            </div>
+                            <div class="col-xs-3">
+                                <a href="#">
+                                    <img class="img-zodiac" src="assets/zodiac/libra.png" alt="zodiac libra" data-toggle="tooltip" data-placement="bottom" title="Libra">
+                                </a>
+                            </div>
+                            <div class="col-xs-3">
+                                <a href="#">
+                                    <img class="img-zodiac" src="assets/zodiac/scorpio.png" alt="zodiac scorpio" data-toggle="tooltip" data-placement="bottom" title="Scorpio">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <a href="#">
+                                    <img class="img-zodiac" src="assets/zodiac/sagittarius.png" alt="zodiac sagittarius" data-toggle="tooltip" data-placement="bottom" title="Sagittarius">
+                                </a>
+                            </div>
+                            <div class="col-xs-3">
+                                <a href="#">
+                                    <img class="img-zodiac" src="assets/zodiac/capricorn.png" alt="zodiac capricorn" data-toggle="tooltip" data-placement="bottom" title="Capricorn">
+                                </a>
+                            </div>
+                            <div class="col-xs-3">
+                                <a href="#">
+                                    <img class="img-zodiac" src="assets/zodiac/aquarius.png" alt="zodiac aquarius" data-toggle="tooltip" data-placement="bottom" title="Aquarius">
+                                </a>
+                            </div>
+                            <div class="col-xs-3">
+                                <a href="#">
+                                    <img class="img-zodiac" src="assets/zodiac/pisces.png" alt="zodiac pisces" data-toggle="tooltip" data-placement="bottom" title="Pisces">
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!--</div>-->
             </div>
-
-        </div>
-        <div class="footer">
 
         </div>
     </div>
 
     <script src="libs/jquery/jquery.js"></script>
-    <script src="libs/bootstrap/bootstrap.js"></script>
-    <script src="libs/angular/angular.js"></script>
-    <script src="libs/angular-ui-router/angular-ui-router.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="libs/video.js/dist/video.js"></script>
+    <script src="libs/videojs-youtube/Youtube.min.js"></script>
 
-    <!--<script src="app.js"></script>-->
+    <script src="app.js"></script>
 
     <script>
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#menu_home").addClass("active");
         });
     </script>
 </body>

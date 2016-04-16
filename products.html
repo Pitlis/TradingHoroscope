@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+
+<head>
+    <title>Products</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="libs/video.js/dist/video-js.css" />
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+    <div class="menu">
+        <div class="menu-logo">
+            <img class="img-zodiac-logo" src="assets/logo.png" alt="home page">
+        </div>
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li id="menu_home"><a href="index.html">HOME</a></li>
+                    <li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ZODIACS<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Aries</a></li>
+                                <li><a href="#">Taurus</a></li>
+                                <li><a href="#">Gemini</a></li>
+                                <li><a href="#">Cancer</a></li>
+                                <li><a href="#">Leo</a></li>
+                                <li><a href="#">Virgo</a></li>
+                                <li><a href="#">Libra</a></li>
+                                <li><a href="#">Scorpio</a></li>
+                                <li><a href="#">Sagittarius</a></li>
+                                <li><a href="#">Capricorn</a></li>
+                                <li><a href="#">Aquarius</a></li>
+                                <li><a href="#">Pisces</a></li>
+                            </ul>
+                        </li>
+                    </li>
+                    <li id="menu_products"><a href="products.html">PRODUCTS</a></li>
+                    <li id="menu_newsletter"><a href="index.html">NEWSLETTER</a></li>
+                    <li id="menu_faq"><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container content">
+        <div class="main-content">
+
+            <div class="products">
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2 description">
+                        <p class="description-header">Take advantage of years of trial and error Peter went through to learn how to be successful with trading and investing.
+                        </p>
+                        <p class="description-content">
+                            Check out his full program catalog, jam-packed with new ideas and techniques that deliver results. These programs are the best on the planet for getting you the trading results you want. And each one has a RISK FREE Trial – so if you don’t see immediate
+                            results, you can get all your money back, guaranteed.
+                        </p>
+
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="product-img">
+                                        <a href="http://www.stockinvestments.nyc/beat-the-market-crash-course/">
+                                            <img src="assets/products/market.png">
+                                        </a>
+                                    </div>
+                                    <div class="carousel-caption">
+                                        <div class="product-link"><a href="http://www.stockinvestments.nyc/beat-the-market-crash-course/">Beat the Market Crash Course</a></div>
+                                        <div class="product-description">
+                                            Here you’ll get intensive “boot camp style” training with step-by-step techniques for creating your own trading strategies, learning the right mindsets, and receiving daily trading signals…
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="product-img">
+                                        <a href="http://www.stockinvestments.nyc/sp-500-playbook/">
+                                            <img src="assets/products/book.png">
+                                        </a>
+                                    </div>
+                                    <div class="carousel-caption">
+                                        <div class="product-link"><a href="http://www.stockinvestments.nyc/sp-500-playbook/">S&P 500 PlayBook</a></div>
+                                        <div class="product-description">
+                                            Learn the foundation of Peter Borovykh’s teachings. Exact steps and specific directions to help you be a more successful trader..
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <script>
+            </script>
+
+        </div>
+    </div>
+
+    <script src="libs/jquery/jquery.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="libs/video.js/dist/video.js"></script>
+    <script src="libs/videojs-youtube/Youtube.min.js"></script>
+
+    <script src="app.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#menu_products").addClass("active");
+        });
+    </script>
+</body>
+
+</html>
