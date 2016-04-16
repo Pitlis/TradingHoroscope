@@ -1,21 +1,47 @@
-@import "./about/about.scss";
 @import "./index/index.scss";
-@import "./why/why.scss";
-@import "../app/angular-styles.scss";
 
 body {
     .content{
-        margin-top: 65px;
+        //margin-top: 65px;
         min-width: 800px;
     }
     .container{
-       min-width: 800px;
+       
     }
-    .logo{
-        background-image: url("assets/logo.png");
-        background-repeat: no-repeat;
-        width: 205px;
-        margin-top: 5px;
-        margin-bottom: -5px;
+    .navbar-nav > li > a, .navbar-brand {
+        padding-top:8px !important; 
+        padding-bottom:0 !important;
+        height: 32px;
+        font-size: 18px;
+        margin-left: 15px;
     }
+    .navbar-nav{
+        padding-left:10%;
+    }
+    .navbar {
+        //margin-top: 30px;
+        min-height:32px !important;
+    }
+    .menu-logo{
+        height: 60px;
+    }
+    .img-zodiac-logo{
+        margin-top: 10px;
+        margin-left: 25px;
+    }
+    
+    .dropdown-menu{
+        background-color: black;
+        opacity: 0.9;
+    }
+    .dropdown-menu > li > a:hover {
+        background-color: greenyellow;
+    }
+    .dropdown-menu > li > a {
+        font-size: 14px;
+        color: white;
+    }
+    
+    
+
 }

@@ -1,29 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='app'>
 
 <head>
     <!-- masterify:tag title -->
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
     <link rel="stylesheet" type="text/css" href="libs/bootstrap/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="libs/video.js/dist/video-js.css" />
 
     <link rel="stylesheet" type="text/css" href="styles.css">
 
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-brand logo">
-                <!--<img class="img-zodiac" src="assets/logo.png" alt="home page">-->
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="Index.html">Horoscope</a></li>
-                <li><a href="Why.html">Why?</a></li>
-                <li><a href="about.html">About us</a></li>
-            </ul>
+    <div class="menu">
+        <div class="menu-logo">
+            <img class="img-zodiac-logo" src="assets/logo.png" alt="home page">
         </div>
-    </nav>
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">HOME</a></li>
+                    <li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ZODIACS<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Aries</a></li>
+                                <li><a href="#">Taurus</a></li>
+                                <li><a href="#">Gemini</a></li>
+                                <li><a href="#">Cancer</a></li>
+                                <li><a href="#">Leo</a></li>
+                                <li><a href="#">Virgo</a></li>
+                                <li><a href="#">Libra</a></li>
+                                <li><a href="#">Scorpio</a></li>
+                                <li><a href="#">Sagittarius</a></li>
+                                <li><a href="#">Capricorn</a></li>
+                                <li><a href="#">Aquarius</a></li>
+                                <li><a href="#">Pisces</a></li>
+                            </ul>
+                        </li>
+                    </li>
+                    <li><a href="about.html">PRODUCTS</a></li>
+                    <li><a href="about.html">NEWSLETTER</a></li>
+                    <li><a href="about.html">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
     <div class="container content">
         <div class="header">
@@ -39,13 +62,13 @@
 
     <script src="libs/jquery/jquery.js"></script>
     <script src="libs/bootstrap/bootstrap.js"></script>
-    <script src="libs/angular/angular.js"></script>
-    <script src="libs/angular-ui-router/angular-ui-router.js"></script>
+    <script src="libs/video.js/dist/video.js"></script>
+    <script src="libs/videojs-youtube/Youtube.min.js"></script>
 
-    <!--<script src="app.js"></script>-->
+    <script src="app.js"></script>
 
     <script>
-            $(document).ready(function(){
+        $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
             });
     </script>
