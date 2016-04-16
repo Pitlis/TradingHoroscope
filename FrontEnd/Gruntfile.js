@@ -14,42 +14,36 @@ module.exports = function(grunt) {
                 }
             }
         },
-
-        html2js: {
-            dist: {
-                src: ['app/*/*.html'],
-                dest: 'tmp/templates.js'
-            }
-        },
-
         clean: {
-            temp: {
-                src: ['tmp', 'app/**/*.js', 'app/**/*.js.map']
+            dist: {
+                src: ['dist/**/*', '!dist/libs/**/*']
             }
         },
-
+        copy: {
+            main: {
+                files: [{
+                    expand: true,
+                    cwd: 'static_components/assets',
+                    src: ['**/*'],
+                    dest: 'dist/assets/'
+                }],
+            },
+            libs:{
+                files: [{
+                    expand: true,
+                    cwd: 'bower_components/video.js/dist',
+                    src: ['**/*'],
+                    dest: 'dist/libs/video.js/dist'
+                }],
+            }
+        },
         concat: {
             options: {
                 separator: ';'
             },
             dist: {
-                src: ['tmp/*.js'],
+                src: ['app/**/*.js'],
                 dest: 'dist/app.js'
-            }
-        },
-        ts: {
-            default: {
-                src: ["app/**/*.ts", "typings/**/*.d.ts"],
-                dest: 'tmp/scripts.js',
-                options: {
-                    sourceMap: false,
-                    target: 'es5',
-                    fast: 'always',
-                    comments: true,
-                    sortOutput: true,
-                    noExternalResolve: true
-                }
-
             }
         },
         masterify: {
@@ -86,8 +80,8 @@ module.exports = function(grunt) {
                 }
             },
             scripts: {
-                files: ['./app/**/*.ts', './static_components/**/*.html'],
-                tasks: ['html2js:dist', 'ts', 'concat:dist', 'masterify', 'clean:temp'],
+                files: ['./app/**/*.js', './static_components/**/*.html'],
+                tasks: ['concat:dist', 'masterify'],
                 options: {
                     atBegin: true,
                     spawn: false
@@ -100,15 +94,14 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-html2js');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-bower-task');
-    grunt.loadNpmTasks('grunt-ts');
     grunt.loadNpmTasks('grunt-html-master');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['bower', 'html2js:dist', 'ts', 'concat:dist', 'masterify', 'sass', 'clean:temp']);
+    grunt.registerTask('default', ['clean:dist', 'bower', 'concat:dist', 'masterify', 'sass', 'copy:main', 'copy:libs']);
 
-    grunt.registerTask('static', ['masterify', 'sass']);
+    grunt.registerTask('static', ['clean:dist', 'masterify', 'sass', 'copy:main', 'copy:libs']);
 
 };
