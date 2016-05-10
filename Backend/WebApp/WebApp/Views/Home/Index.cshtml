@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "TradingHoroscope";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="index">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="player">
+                <video id="vid1" class="video-js vjs-default-skin vjs-16-9" controls data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=33o67OdDqac"}] }'></video>
+            </div>
+        </div>
+    </div>
+    <!--<div class="zodiac-block">-->
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-3">
+                    <a href="/Info/Aries">
+                        <img class="img-zodiac" src="Content/Images/zodiac/aries.png" alt="zodiac aries" data-toggle="tooltip" data-placement="bottom" title="Aries">
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="/Info/Taurus">
+                        <img class="img-zodiac" src="Content/Images/zodiac/taurus.png" alt="zodiac taurus" data-toggle="tooltip" data-placement="bottom"
+                             title="Taurus">
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="/Info/Gemini">
+                        <img class="img-zodiac" src="Content/Images/zodiac/gemini.png" alt="zodiac gemini" data-toggle="tooltip" data-placement="bottom"
+                             title="Gemini">
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="/Info/Cancer">
+                        <img class="img-zodiac" src="Content/Images/zodiac/cancer.png" alt="zodiac cancer" data-toggle="tooltip" data-placement="bottom"
+                             title="Cancer">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3">
+                    <a href="/Info/Leo">
+                        <img class="img-zodiac" src="Content/Images/zodiac/leo.png" alt="zodiac leo" data-toggle="tooltip" data-placement="bottom" title="Leo">
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="/Info/Virgo">
+                        <img class="img-zodiac" src="Content/Images/zodiac/virgo.png" alt="zodiac virgo" data-toggle="tooltip" data-placement="bottom" title="Virgo">
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="/Info/Libra">
+                        <img class="img-zodiac" src="Content/Images/zodiac/libra.png" alt="zodiac libra" data-toggle="tooltip" data-placement="bottom" title="Libra">
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="/Info/Scorpio">
+                        <img class="img-zodiac" src="Content/Images/zodiac/scorpio.png" alt="zodiac scorpio" data-toggle="tooltip" data-placement="bottom"
+                             title="Scorpio">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3">
+                    <a href="/Info/Sagittarius">
+                        <img class="img-zodiac" src="Content/Images/zodiac/sagittarius.png" alt="zodiac sagittarius" data-toggle="tooltip" data-placement="bottom"
+                             title="Sagittarius">
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="/Info/Capricorn">
+                        <img class="img-zodiac" src="Content/Images/zodiac/capricorn.png" alt="zodiac capricorn" data-toggle="tooltip" data-placement="bottom"
+                             title="Capricorn">
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="/Info/Aquarius">
+                        <img class="img-zodiac" src="Content/Images/zodiac/aquarius.png" alt="zodiac aquarius" data-toggle="tooltip" data-placement="bottom"
+                             title="Aquarius">
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="/Info/Pisces">
+                        <img class="img-zodiac" src="Content/Images/zodiac/pisces.png" alt="zodiac pisces" data-toggle="tooltip" data-placement="bottom"
+                             title="Pisces">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--</div>-->
+</div>
+
+@section Styles
+{
+    <link href="@Url.Content("~/Content/Styles/lib/video-js.css")" rel="stylesheet" type="text/css" />
+}
+@section Scripts
+{
+    <script>console.log('!!!');</script>
+    <script src="@Url.Content("~/Scripts/video.js")"></script>
+    <script src="@Url.Content("~/Scripts/Youtube.min.js")"></script>
+}

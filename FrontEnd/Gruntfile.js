@@ -28,6 +28,14 @@ module.exports = function(grunt) {
                     dest: 'dist/assets/'
                 }],
             },
+            scripts: {
+                files: [{
+                    expand: true,
+                    cwd: 'static_components',
+                    src: ['**/*.js'],
+                    dest: 'dist/js/'
+                }],
+            },
             libs: {
                 files: [{
                     expand: true,
@@ -43,15 +51,15 @@ module.exports = function(grunt) {
                 }],
             }
         },
-        concat: {
-            options: {
-                separator: ';'
-            },
-            dist: {
-                src: ['app/**/*.js'],
-                dest: 'dist/app.js'
-            }
-        },
+        // concat: {
+        //     options: {
+        //         separator: ';'
+        //     },
+        //     dist: {
+        //         src: ['app/**/*.js'],
+        //         dest: 'dist/app.js'
+        //     }
+        // },
         masterify: {
             dist: {
                 src: ['static_components/**/*.html', '!static_components/master.html'],
@@ -71,14 +79,14 @@ module.exports = function(grunt) {
                     sourcemap: 'none'
                 },
                 files: {
-                    'dist/styles.css': 'static_components/styles.scss'
+                    '../Backend/WebApp/WebApp/Content/Styles/styles.css': '../Backend/WebApp/WebApp/Content/Styles/styles.scss'
                 }
             }
         },
 
         watch: {
             css: {
-                files: ['./app/**/*.scss', './static_components/**/*.scss'],
+                files: ['../Backend/WebApp/WebApp/Content/Styles/**/*.scss'],
                 tasks: ['sass'],
                 options: {
                     atBegin: true,
@@ -86,8 +94,8 @@ module.exports = function(grunt) {
                 }
             },
             scripts: {
-                files: ['./app/**/*.js', './static_components/**/*.html'],
-                tasks: ['concat:dist', 'masterify'],
+                files: ['./static_components/**/*.js', './static_components/**/*.html'],
+                tasks: ['copy:scripts', 'masterify'],
                 options: {
                     atBegin: true,
                     spawn: false
@@ -106,8 +114,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['clean:dist', 'bower', 'concat:dist', 'masterify', 'sass', 'copy:main', 'copy:libs']);
+    grunt.registerTask('default', ['clean:dist', 'bower', 'masterify', 'sass', 'copy:main', 'copy:libs', 'copy:scripts']);
 
-    grunt.registerTask('static', ['clean:dist', 'masterify', 'sass', 'copy:main', 'copy:libs']);
+    grunt.registerTask('static', ['clean:dist', 'masterify', 'sass', 'copy:main', 'copy:libs', 'copy:scripts']);
 
 };

@@ -1,0 +1,97 @@
+@import "index.scss";
+@import "products.scss";
+@import "faq.scss";
+@import "info.scss";
+@import "admin.scss";
+
+body {
+    .content {
+        //margin-top: 65px;
+        min-width: 800px;
+    }
+    .main-content{
+        min-height: 65vh;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .menu-fullwidth{
+        background-color: #222222;
+        height: 100%;
+    }
+
+    .navbar-nav > li > a, .navbar-brand {
+        padding-top: 8px !important;
+        padding-bottom: 0 !important;
+        height: 32px;
+        font-size: 18px;
+        margin-left: 15px;
+    }
+    nav{
+        margin-bottom: 0px !important;
+    }
+
+    .navbar-nav {
+        display: inline-block;
+        float: none;
+    }
+
+    /*.navbar .navbar-collapse {
+        text-align: center;
+    }*/
+
+    .navbar {
+        //margin-top: 30px;
+        min-height: 32px !important;
+        border: none;
+    }
+
+    .menu-logo {
+        height: 60px;
+    }
+
+    .img-zodiac-logo {
+        margin-top: 10px;
+        margin-left: 25px;
+    }
+
+    .dropdown-menu {
+        background-color: black;
+        opacity: 0.9;
+    }
+
+    .dropdown-menu > li > a:hover {
+        background-color: lawngreen;
+    }
+
+    .dropdown-menu > li > a {
+        font-size: 14px;
+        color: white;
+    }
+
+    .pre-footer {
+        font: 300 13px 'Open Sans', sans-serif;
+        background: #313030;
+        color: #b0b0b0;
+    }
+
+    .footer {
+        background: #313030;
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .pre-footer h2 {
+        font-size: 24px;
+    }
+
+    #subscription-form button{
+        height: 25px;
+    }
+    #subscription-form input{
+        height: 25px;
+        text-align: center;
+    }
+    #subscription-form {
+        margin: 6px;
+    }
+}

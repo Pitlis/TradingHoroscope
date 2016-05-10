@@ -1,0 +1,25 @@
+.products {
+    .description{
+        margin-top: 20px;
+        text-align: center;
+        
+        .description-header{
+            font-size: 26px;
+        }
+        .description-content{
+            font-size: 20px;
+        }
+    }
+    .product-img{
+        background: linear-gradient(to top, black, lawngreen);
+        height: 400px;
+    }
+    .product-link > a{
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+    }
+    .product-description{
+        font-size: 15px;
+    }
+}

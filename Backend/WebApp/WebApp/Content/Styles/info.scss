@@ -1,0 +1,42 @@
+.info {
+    margin-top: 20px;
+    h2{
+        font: 300 24px 'Open Sans', sans-serif;
+        text-align: center;
+    }
+    .zodiac-logo img {
+        height: 80%;
+        width: 80%;
+    }
+
+    .zodiac-logo h1 {
+        font: 300 24px 'Open Sans', sans-serif;
+    }
+    .zodiac-logo {
+       text-align: center;
+    }
+
+    #button-details-info {
+        width: 100%;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .panel-first-info {
+        .panel-heading{
+            background-color: #222222;
+            color: #d3d3d3;
+        }
+    }
+    .table-comparative-analysis{
+        margin-top: 50px;
+        font-family: 'Open Sans';
+    }
+    .table-historical-signals{
+        margin-top: 50px;
+    }
+    .table-historical-signals .panel-body{
+        
+        overflow-y: scroll;
+    }
+}

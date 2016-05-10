@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|PT+Sans+Narrow|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-logo">
+            <a href="/Index"><img class="img-zodiac-logo" src="~/Content/Images/logo.png" alt="home page"></a>
+        </div>
+    </div>
+    <div class="container-fullwidth menu-fullwidth">
+        <div class="container">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-inverse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="menu_home"><a href="/Index">HOME</a></li>
+                        <li id="menu_zodiac">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ZODIACS<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/Info/Aries">Aries</a></li>
+                                <li><a href="/Info/Taurus">Taurus</a></li>
+                                <li><a href="/Info/Gemini">Gemini</a></li>
+                                <li><a href="/Info/Cancer">Cancer</a></li>
+                                <li><a href="/Info/Leo">Leo</a></li>
+                                <li><a href="/Info/Virgo">Virgo</a></li>
+                                <li><a href="/Info/Libra">Libra</a></li>
+                                <li><a href="/Info/Scorpio">Scorpio</a></li>
+                                <li><a href="/Info/Sagittarius">Sagittarius</a></li>
+                                <li><a href="/Info/Capricorn">Capricorn</a></li>
+                                <li><a href="/Info/Aquarius">Aquarius</a></li>
+                                <li><a href="/Info/Pisces">Pisces</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu_products"><a href="/Products">PRODUCTS</a></li>
+                        <li id="menu_faq"><a href="/Faq">FAQ</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right" role="search" id="subscription-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your email">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-xs" data-toggle="modal" data-target=".bs-example-modal-sm">Subscribe</button>
+                    </form>
+                </div><!-- /.navbar-collapse -->
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="main-content">
+            @RenderBody()
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="pre-footer">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 pre-footer-col">
+                        <h2>About us</h2>
+                        <p style="text-align:justify;">Trading Horoscope is the first truly interactive platform that can help you learn the basics of trading in a relatively fun and super easy fashion.<br><br> You do not need to believe in astrology (we also don’t). But as long as you believe in diversification, you must Subscribe!</p>
+
+                    </div>
+                    <div class="col-md-3 col-sm-1"></div>
+                    <div class="col-md-3 col-sm-5 pre-footer-col">
+                        <h2>Contact Us</h2>
+                        <address class="margin-bottom-40">
+                            Email: <a href="mailto:newsletter@tradinghoroscope.com">newsletter@tradinghoroscope.com</a><br>
+                            Social Media :
+                            <ul class="social-footer list-unstyled list-inline ">
+                                <li><a href="https://www.facebook.com/TradingHoroscope" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/StocksHoroscope" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                            <a href="javascript:void(0)" id="stocktwits-share-button" style="cursor: pointer;"><img style="border-width:0;" src="https://stocktwits.com/images/widget/stocktwits_share.png"></a>
+                            <script src="http://stocktwits.com/addon/button/share.min.js"></script>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="gridSystemModalLabel">Select your zodiac</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item disabled">Aries</a>
+                        <a href="#" class="list-group-item">Taurus</a>
+                        <a href="#" class="list-group-item">Gemini</a>
+                        <a href="#" class="list-group-item">Cancer</a>
+                        <a href="#" class="list-group-item">Leo</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" disabled>Subscribe</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/libs")
+    @RenderSection("Scripts", false)
+    @RenderSection("Styles", false)
+</body>
+</html>

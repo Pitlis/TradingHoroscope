@@ -1,0 +1,47 @@
+<!-- masterify:master master1 -->
+<!-- /masterify -->
+
+<!-- masterify:fortag title -->
+<title>Zodiac</title>
+<!-- /masterify -->
+
+<!-- masterify:fortag content -->
+
+<div class="info">
+    <div class="row">
+        <div class="md-12">
+
+        </div>
+
+    </div>
+                <div id="dashboard_div"  style="height: 60vh; width: 100%;">
+                <div id="chart_div" style="height: 90%; width: 100%;"></div>
+                <div id="filter_div" style="height: 100px"></div>
+            </div>
+</div>
+<script>
+
+</script>
+
+<!-- /masterify -->
+
+<!-- masterify:fortag scripts -->
+<script>
+    $(document).ready(function () {
+            $("#menu_zodiac").addClass("active");
+        });
+
+</script>
+<!-- /masterify -->
+
+<!-- masterify:fortag scripts-links -->
+<script src="assets/testChartData.js"></script>
+<script src="js/info/zodiac-info.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', {packages: ['corechart', 'controls']});
+    google.charts.setOnLoadCallback(drawChart);
+
+</script>
+
+<!-- /masterify -->
