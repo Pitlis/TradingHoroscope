@@ -1,0 +1,16 @@
+﻿<div class="content-list">
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <td><b>Comments<b></td>
+                <td><b>Date of upload<b></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tr ng-repeat="item in ContentCards">
+            <td width="70%">{{ item.Comment }}</td>
+            <td width="20%">{{ item.LoadedDate | date: 'medium' }}</td>
+            <td width="10%"><button type="button" class="btn btn-danger" ng-click="removeContentCard(item.Id)">Remove</button></td>
+        </tr>
+    </table>
+</div>

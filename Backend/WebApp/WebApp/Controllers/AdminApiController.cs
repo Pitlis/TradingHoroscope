@@ -6,12 +6,17 @@ using System.Net.Http;
 using System.Web.Http;
 using Microsoft.AspNet.Identity;
 using System.Web;
+using Domain;
+using Domain.Interfaces;
+using DataBaseAccess;
 
 namespace WebApp.Controllers
 {
     [Authorize(Roles = "admin")]
     public class AdminApiController : ApiController
     {
+        IRepository repo = new Repository();
+
         // GET: api/AdminApi
         public IEnumerable<string> Get()
         {
@@ -27,9 +32,11 @@ namespace WebApp.Controllers
         }
 
         // GET: api/AdminApi/5
-        public string Get(int id)
+        [HttpGet]
+        [Route("api/AdminApi/GetContentCards/{type}")]
+        public IList<DataContent> GetContentCards(string type)
         {
-            return "value";
+            return repo.GetContentCards(type);
         }
 
         // POST: api/AdminApi

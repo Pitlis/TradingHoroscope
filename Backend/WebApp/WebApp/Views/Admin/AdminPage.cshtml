@@ -4,41 +4,50 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="admin-page">
-    <div ng-app="app" ng-controller="test">
+    <div ng-app="admin-module" ng-controller="test">
         <div>
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Daily Horoscope</a></li>
-                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+                <li role="presentation" class="active"><a href="#DailyHoroscope" aria-controls="DailyHoroscope" role="tab" data-toggle="tab">Daily Horoscope</a></li>
+                <li role="presentation"><a href="#ZodiacFundOverview" aria-controls="ZodiacFundOverview" role="tab" data-toggle="tab">Zodiac (fund overview)</a></li>
+                <li role="presentation"><a href="#FundFundOverview" aria-controls="FundFundOverview" role="tab" data-toggle="tab">Fund (fund overview)</a></li>
+                <li role="presentation"><a href="#HistoricalSignals" aria-controls="HistoricalSignals" role="tab" data-toggle="tab">Historical signals</a></li>
+                <li role="presentation"><a href="#ChartData" aria-controls="ChartData" role="tab" data-toggle="tab">Chart data</a></li>
+                <li role="presentation"><a href="#NewsLetters" aria-controls="NewsLetters" role="tab" data-toggle="tab">Newsletters</a></li>
             </ul>
 
             <!-- Tab panes -->
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="home">
-                    <input type="file" file-change="loadDailyHoroscope($event,files)" ng-model="MyFiles" multiple /><br />
+                <div role="tabpanel" class="tab-pane active" id="DailyHoroscope">
+                    <content-loader content-type="DailyHoroscope"></content-loader>
                     <hr/>
-                    <table class="table table-hover table-striped">
-                        <thead>
-                            <tr ng-repeat="x in DailyHoroscopeCards">
-                                <td>Comments</td>
-                                <td>Date loaded</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </thead>
-                        <tr ng-repeat="x in DailyHoroscopeCards">
-                            <td>{{ x.Comment }}</td>
-                            <td>{{ x.LoadedDate }}</td>
-                            <td><button type="button" class="btn btn-info" ng-click="showDataCard(x.Id)">Show</button></td>
-                            <td><button type="button" class="btn btn-danger" ng-click="removeDataCard(x.Id)">Remove</button></td>
-                        </tr>
-                    </table>
+                    <content-list content-type="DailyHoroscope"></content-list>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="profile">2.</div>
-                <div role="tabpanel" class="tab-pane" id="messages">3.</div>
-                <div role="tabpanel" class="tab-pane" id="settings">4.</div>
+                <div role="tabpanel" class="tab-pane" id="ZodiacFundOverview">
+                    <content-loader content-type="ZodiacFundOverview"></content-loader>
+                    <hr />
+                    <content-list content-type="ZodiacFundOverview"></content-list>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="FundFundOverview">
+                    <content-loader content-type="FundFundOverview"></content-loader>
+                    <hr />
+                    <content-list content-type="FundFundOverview"></content-list>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="HistoricalSignals">
+                    <content-loader content-type="HistoricalSignals"></content-loader>
+                    <hr />
+                    <content-list content-type="HistoricalSignals"></content-list>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="ChartData">
+                    <content-loader content-type="ChartData"></content-loader>
+                    <hr />
+                    <content-list content-type="ChartData"></content-list>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="NewsLetters">
+                    <content-loader content-type="NewsLetters"></content-loader>
+                    <hr />
+                    <content-list content-type="NewsLetters"></content-list>
+                </div>
             </div>
 
         </div>
@@ -53,7 +62,11 @@
 {
     <script src="@Url.Content("~/Scripts/angular.js")"></script>
     <script src="@Url.Content("~/Scripts/angular-base64.min.js")"></script>
+
     <script src="@Url.Content("~/Scripts/Site/admin-page.js")"></script>
+    <script src="@Url.Content("~/Scripts/Site/directives/content-loader/content-loader.directive.js")"></script>
+    <script src="@Url.Content("~/Scripts/Site/directives/content-list/content-list.directive.js")"></script>
+
     <script src="@Url.Content("~/Scripts/Site/CSVParser.js")"></script>
     <script>
 

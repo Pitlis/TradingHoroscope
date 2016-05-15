@@ -183,7 +183,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminApiController.cs" />
+    <Compile Include="Controllers\DataUpdateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InfoApiController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1085,6 +1087,10 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\Site\admin-page.js" />
     <Content Include="Scripts\Site\CSVParser.js" />
+    <Content Include="Scripts\Site\directives\content-list\content-list.directive.js" />
+    <Content Include="Scripts\Site\directives\content-list\content-list.tpl.html" />
+    <Content Include="Scripts\Site\directives\content-loader\content-loader.directive.js" />
+    <Content Include="Scripts\Site\directives\content-loader\content-loader.tpl.html" />
     <Content Include="Scripts\Site\testChartData.js" />
     <Content Include="Scripts\Site\zodiac-info.js" />
     <Content Include="Scripts\video.js" />
@@ -1130,6 +1136,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\NewFolder1\" />
     <Folder Include="Views\TradingHoroscopeEditData\" />
   </ItemGroup>
   <ItemGroup>

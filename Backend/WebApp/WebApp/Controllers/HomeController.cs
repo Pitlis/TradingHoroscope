@@ -1,4 +1,5 @@
 ﻿using DataBaseAccess;
+using Domain;
 using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -21,17 +22,28 @@ namespace WebApp.Controllers
 
         public ActionResult Faq()
         {
-            repository.CreateSubscription(new Domain.Subscription() {Email="email 1" });
+            repository.CreateSubscription(new Domain.Subscription() { Email = "email 1" });
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
+        [HttpGet]
+        [Route("{info/{zodiac}")]
         public ActionResult Info(string zodiac)
         {
-            ViewBag.Message = "Your contact page.";
+            DailyHoroscopeRecord horoscope = null;
+            try
+            {
+                Zodiac z = (Zodiac)Enum.Parse(typeof(Zodiac), zodiac);
+                horoscope = repository.GetTodayHoroscope(z);
+            }
+            catch(Exception ex)
+            {
+                return RedirectToAction("Index");
+            }
 
-            return View();
+            return View(horoscope);
         }
 
         public ActionResult Products()

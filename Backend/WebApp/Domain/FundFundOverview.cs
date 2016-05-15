@@ -7,17 +7,16 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class FundOverviewChart
+    public class FundFundOverview
     {
         [Index]
         public int Id { get; set; }
         [Index]
-        public Zodiac Zodiac { get; set; }
-        [Index]
-        public DateTime Date { get; set; }
+        public int Year { get; set; }
 
-        public double Fund { get; set; }
-        public double SP500 { get; set; }
+        public double? TotalFundReturn { get; set; }
+        public double? AvgSignalsReturn { get; set; }
+        public double? ProfitableSignals { get; set; }
 
         [Index]
         public DataContent DataArray { get; set; }
