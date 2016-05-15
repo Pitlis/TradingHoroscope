@@ -55,6 +55,8 @@ namespace WebApp.Controllers
         //
         // GET: /Account/Login
         [AllowAnonymous]
+        [HttpGet]
+        [Route("/rabbithole/login")]
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
@@ -66,6 +68,7 @@ namespace WebApp.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
+        [Route("rabbithole/login")]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
             if (!ModelState.IsValid)
@@ -388,6 +391,7 @@ namespace WebApp.Controllers
         //
         // POST: /Account/LogOff
         [HttpGet]
+        [Route("/rabbithole/logout")]
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
@@ -396,11 +400,11 @@ namespace WebApp.Controllers
 
         //
         // GET: /Account/ExternalLoginFailure
-        [AllowAnonymous]
-        public ActionResult ExternalLoginFailure()
-        {
-            return View();
-        }
+        //[AllowAnonymous]
+        //public ActionResult ExternalLoginFailure()
+        //{
+        //    return View();
+        //}
 
         protected override void Dispose(bool disposing)
         {

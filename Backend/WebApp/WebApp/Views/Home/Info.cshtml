@@ -8,14 +8,52 @@
     <div class="row">
         <div class="col-sm-4 col-md-4">
             <div class="zodiac-logo">
-                <img class="zodiac-logo" src="~/Content/Images/zodiac/aquarius.png" />
-                <h1>Aries</h1>
+                @switch ((Domain.Zodiac)ViewBag.Zodiac)
+                {
+                    case Domain.Zodiac.Aries:
+                        <img class="zodiac-logo" src="~/Content/Images/zodiac/aries.png" />
+                        break;
+                    case Domain.Zodiac.Aquarius:
+                        <img class="zodiac-logo" src="~/Content/Images/zodiac/aquarius.png" />
+                        break;
+                    case Domain.Zodiac.Cancer:
+                        <img class="zodiac-logo" src="~/Content/Images/zodiac/cancer.png" />
+                        break;
+                    case Domain.Zodiac.Capricorn:
+                        <img class="zodiac-logo" src="~/Content/Images/zodiac/capricorn.png" />
+                        break;
+                    case Domain.Zodiac.Gemini:
+                        <img class="zodiac-logo" src="~/Content/Images/zodiac/gemini.png" />
+                        break;
+                    case Domain.Zodiac.Leo:
+                        <img class="zodiac-logo" src="~/Content/Images/zodiac/leo.png" />
+                        break;
+                    case Domain.Zodiac.Libra:
+                        <img class="zodiac-logo" src="~/Content/Images/zodiac/libra.png" />
+                        break;
+                    case Domain.Zodiac.Pisces:
+                        <img class="zodiac-logo" src="~/Content/Images/zodiac/pisces.png" />
+                        break;
+                    case Domain.Zodiac.Sagittarius:
+                        <img class="zodiac-logo" src="~/Content/Images/zodiac/sagittarius.png" />
+                        break;
+                    case Domain.Zodiac.Scorpio:
+                        <img class="zodiac-logo" src="~/Content/Images/zodiac/scorpio.png" />
+                        break;
+                    case Domain.Zodiac.Taurus:
+                        <img class="zodiac-logo" src="~/Content/Images/zodiac/taurus.png" />
+                        break;
+                    case Domain.Zodiac.Virgo:
+                        <img class="zodiac-logo" src="~/Content/Images/zodiac/virgo.png" />
+                        break;
+                }
+                <h1>@ViewBag.Zodiac</h1>
             </div>
         </div>
         <div class="col-sm-8 col-md-8">
             <div class="panel panel-default panel-first-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Trading Horoscope for Aries | @Model.Date.ToString("d MMMM, yyyy")</h3>
+                    <h3 class="panel-title">Trading Horoscope for @ViewBag.Zodiac | @Model.Date.ToString("d MMMM, yyyy")</h3>
                 </div>
                 <div class="panel-body">
                     <table class="table table-condensed">
@@ -58,10 +96,10 @@
     </div>
 
     <div class="row">
-        <button id="button-details-info" type="button" class="btn btn-default" data-toggle="collapse" data-target="#details-info">
+        <button id="button-details-info" type="button" class="btn btn-default" data-toggle="collapse" data-target="#details-info" style="white-space: inherit ! important;">
             <i class="fa fa-angle-down fa-2x pull-left" aria-hidden="true"></i>
-            Show details
-            <i class="fa fa-angle-down fa-2x pull-right" aria-hidden="true"></i>
+            <span>Show details</span>
+            <i class="fa fa-angle-down fa-2x pull-right" aria-hidden="true" style="width:30px"></i>
         </button>
 
         <div id="details-info" class="collapse">
@@ -89,9 +127,7 @@
                                         <td>S&P 500 Index</td>
                                     </tr>
                                 </thead>
-                                <tbody id="fund-overview-content">
-                                    
-                                </tbody>
+                                <tbody id="fund-overview-content"></tbody>
                             </table>
                         </div>
                     </div>
@@ -104,7 +140,7 @@
                         </div>
                         <div class="panel-body">
                             <table class="table table-condensed table-hover table-striped">
-                                <thead >
+                                <thead>
                                     <tr class="default">
                                         <td>Date</td>
                                         <td>Ticker</td>
@@ -115,9 +151,7 @@
                                         <td>Return</td>
                                     </tr>
                                 </thead>
-                                <tbody id="historical-signals-content">
-
-                                </tbody>
+                                <tbody id="historical-signals-content"></tbody>
                             </table>
                         </div>
                     </div>
@@ -134,7 +168,7 @@
 
     <script src="@Url.Content("https://www.gstatic.com/charts/loader.js")"></script>
     <script type="text/javascript">
-        
+
     </script>
     <script src="@Url.Content("~/Scripts/Site/testChartData.js")"></script>
     <script src="@Url.Content("~/Scripts/Site/zodiac-info.js")"></script>

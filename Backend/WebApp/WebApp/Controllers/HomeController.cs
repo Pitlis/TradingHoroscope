@@ -22,7 +22,6 @@ namespace WebApp.Controllers
 
         public ActionResult Faq()
         {
-            repository.CreateSubscription(new Domain.Subscription() { Email = "email 1" });
             ViewBag.Message = "Your application description page.";
 
             return View();
@@ -37,6 +36,7 @@ namespace WebApp.Controllers
             {
                 Zodiac z = (Zodiac)Enum.Parse(typeof(Zodiac), zodiac);
                 horoscope = repository.GetTodayHoroscope(z);
+                ViewBag.Zodiac = z;
             }
             catch(Exception ex)
             {

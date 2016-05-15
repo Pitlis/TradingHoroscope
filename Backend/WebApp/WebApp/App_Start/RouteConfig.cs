@@ -12,11 +12,15 @@ namespace WebApp
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            
-            //public pages
+
             routes.MapRoute(
                 name: "Index",
                 url: "Index",
+                defaults: new { controller = "Home", action = "Index" }
+            );
+            routes.MapRoute(
+                name: "Default",
+                url: "",
                 defaults: new { controller = "Home", action = "Index" }
             );
             routes.MapRoute(
@@ -35,25 +39,19 @@ namespace WebApp
                 defaults: new { controller = "Home", action = "Info", zodiac = UrlParameter.Optional }
             );
             routes.MapRoute(
-                name: "Edit",
-                url: "edit",
-                defaults: new { controller = "Admin", action = "AdminPage"}
+                name: "Rabbithole",
+                url: "rabbithole",
+                defaults: new { controller = "Admin", action = "AdminPage" }
             );
             routes.MapRoute(
                 name: "Login",
-                url: "edit/login",
+                url: "rabbithole/login",
                 defaults: new { controller = "Account", action = "Login" }
             );
             routes.MapRoute(
                 name: "Logout",
-                url: "edit/logout",
+                url: "rabbithole/logout",
                 defaults: new { controller = "Account", action = "LogOff" }
-            );
-
-            routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
         }
